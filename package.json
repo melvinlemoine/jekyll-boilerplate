@@ -8,6 +8,7 @@
     "build-clean": "rimraf css",
     "build-sass": "node-sass --output-style expanded --source-map true sass/styles.sass assets/css/styles.css",
     "watch": "npm run build-sass -- --watch",
+    "jekyll-serve": "bundle exec jekyll serve",
     "jekyll-build": "bundle exec jekyll build",
     "jekyll-watch": "bundle exec jekyll build --watch",
     "jekyll-deploy": "rm -rf _site/ && npm run jekyll-build"
