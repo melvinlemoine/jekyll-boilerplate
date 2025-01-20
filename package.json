@@ -1,12 +1,12 @@
 {
-  "name": "Jekyll-boilerplate",
-  "version": "1.0.0",
+  "name": "integration-boilerplate",
+  "description": "",
+  "version": "1.6",
   "scripts": {
-    "deploy": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
-    "build-autoprefix": "postcss --use autoprefixer --map false --output assets/css/styles.css assets/css/styles.css",
-    "build-cleancss": "cleancss -o assets/css/styles.css assets/css/styles.css",
-    "build-clean": "rimraf css",
-    "build-sass": "node-sass --output-style expanded --source-map true sass/styles.sass assets/css/styles.css",
+    "deploy": "npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
+    "build-autoprefix": "postcss --use autoprefixer --output assets/css/style.css assets/css/style.css",
+    "build-cleancss": "cleancss -o assets/css/style.css assets/css/style.css",
+    "build-sass": "sass sass/styles.sass assets/css/style.css",
     "watch": "npm run build-sass -- --watch",
     "jekyll-serve": "bundle exec jekyll serve",
     "jekyll-build": "bundle exec jekyll build",
@@ -15,10 +15,14 @@
   },
   "author": "https://github.com/melvinlemoine",
   "devDependencies": {
-    "autoprefixer": "^10.4.1",
-    "clean-css-cli": "^5.5.0",
-    "node-sass": "^7.0.1",
-    "postcss-cli": "^9.1.0",
-    "rimraf": "^3.0.2"
-  }
+    "autoprefixer": "^10.4.20",
+    "clean-css-cli": "^5.6.3",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.82.0"
+  },
+  "browserslist": [
+    "last 4 version",
+    "> 0.5%",
+    "not dead"
+  ]
 }
